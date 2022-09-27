@@ -1,0 +1,905 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;1,500&display=swap');
+
+
+:root{
+    --main-color:#192e5c;
+    --black:#222;
+    --white:#fff9;
+    --light-black:#777;
+    --light-white:#fff9;
+    --sen-color: #355564;
+    --dark-bg:rgba(0,0,0,.7);
+    --light-bg:#eee;
+    --fund-login: #dfd3d3;
+    --fund-login1: #FFFFFF;
+    --fund-login2: #EEEEEE;
+    --input: #C8C8C8C8;
+    --border:0.2rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
+
+
+
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background-color: var(--white);
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+
+
+
+
+section{
+    padding: 5rem 10%;
+}
+
+/* tempo de transição dos slides */
+@keyframes fadeIn{
+    0%{
+        transform: scale(.5);
+        opacity: 0;
+    }
+}
+
+/* home serviços - front */
+.heading{
+    background-size: cover !important;
+    background-position: center !important;
+    padding-top: 10rem;
+    padding-bottom: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading h1{
+    font-size: 10rem;
+    text-transform: uppercase;
+    color: var(--sen-color);
+    text-shadow: var(--text-shadow);
+}
+
+/*-------orientação do contrato------*/
+
+.orintacontrato{
+    width: 100%;
+    text-align: center;
+    background: var(--light-bg);
+}
+.orintacontrato h3{
+    font-size: 2.8rem;
+    color: var(--sen-color);
+}
+.orintacontrato p{
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+/*--Botão -slide--*/
+.btn{
+    display: inline-block;
+    background: var(--black);
+    margin-top: 1rem;
+    color: var(--white);
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: var(--sen-color);
+}
+
+.contrato{
+    font-size: 2.5rem;
+}
+.container-user .useres input{
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    font-size: 2rem;
+    color: var(--light-black);
+    text-transform: none;
+}
+
+.container-user .useres input:focus{
+    background: var(--black);
+    color: var(--white);
+}
+
+
+
+/*--Botão -slide--*/
+
+.heading-title{
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.header{
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    z-index: 10000;
+    background-color: var(--white);
+    display: flex;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-shadow: var(--box-shadow);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.header .navbar a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: var(--black);
+}
+
+.header .navbar a:hover{
+    color: var(--light-black);
+}
+
+#menu-btn{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--black);
+    display: none;
+}
+
+
+/*----botão logout--*/
+.navbar .gout{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: var(--main-color);
+}
+.navbar .gout:hover{
+    color: var(--light-black);
+}
+
+
+/*---Slides---*/
+.home{
+    padding:0;
+
+}
+
+.home .slide{
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover !important;
+    background-position: center !important;
+    min-height: 50rem;
+}
+
+.home .slide .content{
+    width: 85rem;
+    display: none;
+
+}
+
+.home .swiper-slide-active .content{
+    display: inline-block;
+}
+
+/* animação dos slides */
+.home .slide .content span{
+    display: block;
+    font-size: 2.2rem;
+    color: var(--light-bg);
+    padding-bottom: 1rem;
+    animation:fadeIn .4s linear backwards .2s;
+
+}
+
+.home .slide .content h3{
+    font-size: 3vw;
+    color: var(--sen-color);
+    text-transform: uppercase;
+    line-height: 1;
+    text-shadow: var(--text-shadow);
+    padding: 1rem 0;
+    animation:fadeIn .4s linear backwards .4s;
+}
+
+.home .slide .content .btn{
+    animation:fadeIn .4s linear backwards .6s;
+}
+
+.home .swiper-button-next,
+.home .swiper-button-prev{
+    top: inherit;
+    left: inherit;
+    bottom: 0;
+    right: 0;
+    height: 7rem;
+    width: 7rem;
+    background: var(--white);
+    color: var(--black);
+}
+
+.home .swiper-button-next:hover,
+.home .swiper-button-prev:hover{
+    background: var(--sen-color);
+    color: var(--white);
+
+}
+
+.home .swiper-button-next::after,
+.home .swiper-button-prev::after{
+    font-size: 2rem;
+}
+
+.home .swiper-button-prev{
+    right: 7rem;
+}
+/*---Slides---*/
+
+.serviços .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.5rem;
+}
+
+.serviços .box-container .box{
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--sen-color);
+    cursor: pointer;
+}
+
+.serviços .box-container .box:hover{
+    background: var(--black);
+}
+
+.serviços .box-container .box img{
+    height: 7rem;
+}
+
+.serviços .box-container .box h3{
+    color: var(--white);
+    font-size: 1.7rem;
+    padding-top: 1rem;
+}
+
+
+
+/* home sobre */
+.home-sobre{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;    
+}
+
+.home-sobre .image{
+    flex:1 1 41rem;
+
+}
+
+.home-sobre .image img{
+    width: 100%;
+}
+
+.home-sobre .content{
+    flex:1 1 41rem;
+    padding: 3rem;
+    background: var(--light-bg);
+}
+
+.home-sobre .content h3{
+    font-size: 3rem;
+    color: var(--black);
+}
+
+.home-sobre .content p{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    line-height: 2;
+    color: var(--black);
+}
+
+/* front da seção de pacotes */
+.home-pacotes{
+    background: var(--light-bg);
+
+}
+
+.home-pacotes .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.home-pacotes .box-container .box{
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    background: var(--white);
+}
+
+.home-pacotes .box-container .box .image{
+    height: 25rem;
+    overflow: hidden;
+
+}
+
+.home-pacotes .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.home-pacotes .box-container .box .content{
+    padding: 2rem;
+    text-align: center;
+}
+
+.home-pacotes .box-container .box .content h3{
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.home-pacotes .box-container .box .content p{
+    font-size: 1.5rem;
+    color: var(--light-black);
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+.home-pacotes .saiba-mais{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+
+.container-user{
+    padding: 2rem;
+}
+.container-user .useres{
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.6rem;
+    color: var(--light-black);
+    text-transform: none;
+    margin-top: 1.5rem;
+    border: var(--border);
+}
+
+.container{
+    font-size: 2rem;
+    width: 100%;
+}
+
+.table{
+    width: 100%;
+    padding: 2rem;
+    font-size: 2rem;
+    background: var(--fund-login1);
+}
+.table .stilo{
+    width: 100%;
+    text-align: center;
+}
+.table .stilo th{
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+/*form cadastro*/
+.Cadastro .crud-form{
+    padding: 2rem;
+    background: var(--light-bg);
+
+}
+.Cadastro .crud-form  .flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.Cadastro .crud-form  .flex .inputox{
+    flex: 1 1 41rem;
+
+}
+.Cadastro .crud-form  .flex .inputox input{
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.6rem;
+    color: var(--light-black);
+    text-transform: none;
+    margin-top: 1.5rem;
+    border: var(--border);
+
+}
+.Cadastro .crud-form  .flex .inputox input:focus{
+    background: var(--black);
+    color: var(--white);
+
+}
+.Cadastro .crud-form  .flex .inputox input:focus::placeholder{
+    color: var(--light-white);
+    
+}
+.Cadastro .crud-form  .flex .inputox span{
+    font-size: 1.5rem;
+    color: var(--light-black);
+}
+.Cadastro .crud-form .btn{
+    margin-top: center;
+}
+
+
+/* home Orçamento */
+.home-contrato{
+    text-align: center;
+}
+
+.home-contrato .content{
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+.home-contrato .content h3{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.home-contrato .content p{
+    font-size: 1.5rem;
+    color: var(--light-black);
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+
+/* continuaçao home serviços front*/
+.sobre-serviços{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.sobre-serviços .image{
+    flex: 1 1 41rem;
+}
+/* home serviços (resposividade) */
+.sobre-serviços .image img{
+    width: 100%;
+}
+
+.sobre-serviços .content{
+    flex: 1 1 41rem;
+    text-align: center;
+}
+
+.sobre-serviços .content h3{
+    font-size: 3rem;
+    color: var(--black);
+}
+
+.sobre-serviços .content p{
+    font-size:2rem;
+    color: var(--light-black);
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+.sobre-serviços .content .icons-container{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+.sobre-serviços .content .icons-container .icons{
+    background: var(--light-bg);
+    padding: 1rem;
+    flex: 1 1 16rem; /*alihando os item um do lado do outro*/
+}
+
+.sobre-serviços .content .icons-container .icons i{
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: var(--sen-color);
+}
+
+.sobre-serviços .content .icons-container .icons span{
+    font-size: 1.5rem;
+    color: var(--light-black);
+    display: block;
+}
+
+/*-----------------login-----------------------*/
+.user-container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 60px;
+    background: var(--fund-login1);
+}
+
+.user-container form{
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    background: var(--fund-login2);
+    text-align: center;
+    width: 500px;
+}
+
+.user-container form h3{
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: var(--black);
+}
+
+.user-container form input,
+.user-container form select{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 17px;
+    margin: 8px 0;
+    background: var(--input);
+    border-radius: 5px;
+}
+
+.user-container form select option{
+    background: var(--input);
+    text-align: center;
+}
+
+.user-container form .form-btn{
+    background: var(--sen-color);
+    color: var(--fund-login);
+    text-transform: capitalize;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.user-container form .form-btn:hover{
+    background: var(--black);
+    color: var(--fund-login);
+}
+
+.user-container form p{
+    margin-top: 10px;
+    font-size: 20px;
+    color: var(--black);
+}
+.user-container form p a{
+    color: var(--sen-color);
+}
+
+/*---------Login Animado------*/
+.user-container{
+    animation-name: fade;
+    animation-duration:  3s;
+}
+.user-container{
+    animation-name: move;
+    animation-duration: 1s;
+}
+
+/*.user-container{
+    background-color: var(--fund-login);
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(100deg, #355564, #344058, #fff9);
+    background-size: 600% 600%;
+    animation-name: bgfund;
+    animation: bgfund 6s linear infinite;
+}*/
+
+@keyframes fade{
+    from{
+        opacity: 0;
+        transform: scale(0.9);
+    }to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes move{
+    from{
+        opacity: 0;
+        transform: translateX(-35%);
+    }to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes bgfund{
+    0%{
+        background-position: 0% 85%;
+    }50%{
+        background-position: 100% 20%;
+    }
+    100%{
+        background-position: 0% 85%;    
+    }
+}
+
+.cubo li{
+    width: 70px;
+    height: 70px;
+    background-color: rgba(41, 47, 99, 0.322);
+    display: block;
+    position: absolute;
+    bottom: -40px;
+    animation: up 4s linear infinite alternate;
+}
+
+@keyframes up {
+    from{   
+            opacity: 0; /*para os cubos sairem meio desaparecidos */
+            transform: translateY(0);
+    }50%{
+            opacity: 1;
+    }to{
+            opacity: 0;
+            transform: translateY(-900px) rotate(980deg);
+    }
+}
+
+
+/*error login*/
+.user-container form .error-msg{
+    margin: 10px 0;
+    display: block;
+    background: var(--sen-color);
+    color: var(--fund-login);
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+
+
+/* Fronte do Roda pe */
+.footer{
+    background: url(../image/test.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+}
+
+.footer .box-container .box h3{
+    color: var(--white);
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.footer .box-container .box a{
+    color: var(--light-white);
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+    display: block;
+}
+
+.footer .box-container .box a i{
+    color: var(--main-color);
+    padding-right: .5rem;
+    transition: 2s linear;
+}
+
+.footer .box-container .box a:houver i{
+    padding-right: 2rem;
+}
+
+.footer .credit{
+    text-align: center;
+    padding-top: 3rem;
+    margin-top: 3rem;
+    border-top: 1rem (--light-white);
+    font-size: 2rem;
+}
+
+.footer .credit span{
+        color: var(--white);
+}
+
+.bttn{
+    display: inline-block;
+    background: var(--sen-color);
+    margin-top: 1rem;
+    color: var(--white);
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+}
+
+.bttn:hover{
+    background: var(--light-black);
+}
+
+
+
+/*---------------tabela cliente---------------*/
+
+.titulotable h3{
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+.containeradmin{
+    margin: 2rem 0;
+    overflow-y: scroll;
+}
+
+
+.containeradmin .tablee{
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 2rem;
+    margin: 10px 70px 70px;
+    box-shadow: var(--box-shadow);
+    margin: 30px 0;
+}
+
+.containeradmin .tablee .stilo{
+    padding:2rem;    
+    background: var(--light-bg);
+    color: var(--sen-color);
+    border-radius: 5px;
+    font-size: 2.5rem;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+
+}
+.containeradmin .tablee .table-group-divider{
+    width: 100%;
+    font-size: 2rem;
+    color: var(--light-black);
+    text-align: center;
+    padding: 8px;
+}
+
+.containeradmin .tablee .table-group-divider tr:hover{
+    background: var(--light-bg);
+   
+}
+
+
+
+/*Pagina admin */
+.containeradmin{
+    width: 100%;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.admin-client-form-containeradmin form{
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: .5rem;
+    background: var(--fund-login);
+}
+
+/* Pagina em Responsivo */
+@media (max-width:1200px){
+    section{
+        padding: 3rem 5%;
+    }
+}
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+        
+    section{
+        padding: 3rem 2rem;
+    }
+}
+
+@media (max-width:768px){
+
+    .heading h1{
+        font-size: 4rem;
+    }
+    #menu-btn{
+        display: inline-block;
+        transition: .2s linear;
+    }
+    #menu-bttn{
+        display: inline-block;
+        transition: .2s linear;
+    }
+
+    #menu-btn.fa-times{
+        transform: rotate(180deg);
+    }
+
+    .header .navbar{
+        position: absolute;
+        top:99%; left:0; right:0;
+        background-color: var(--white);
+        border-top: var(--border);
+        padding: 2rem;
+        transition: .2s linear;
+        /*esconde as opções no responsivo*/
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    /*Entra o Js*/
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .navbar a{
+        display: block;
+        margin: 2rem;
+        text-align: center;
+    }
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .heading-title{
+        font-size: 3.5rem;
+
+    }
+
+    .home .slide .content h3{
+        font-size: 10vw;
+    }
+}
